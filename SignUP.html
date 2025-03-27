@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding-bottom: 3%;
+            margin: 0;
+        }
+    
+        .container {
+            width: 50%;
+            background: white;
+            padding: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0d0b72;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            display: contents;
+            padding: 3%;
+            margin: 5%;
+            color: #444;
+        }
+
+        .form-control {
+           
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        select {
+            width: 30%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: white;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-reset {
+            background-color: #e0e0e0;
+        }
+
+        .btn-reset:hover {
+            background-color: #d6d6d6;
+        }
+
+        .btn-submit {
+            background-color: #0d0b72;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background-color: #0d0b72;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Registration Form</h1>
+
+        <div class="form-group" style=" float: left; padding: 2%;">
+            <label class="form-label" for="firstName">First Name</label>
+            <input type="text" id="firstName" class="form-control">
+        </div>
+
+        <div class="form-group" style=" padding: 2%;">
+            <label class="form-label" for="lastName">Last Name</label>
+            <input type="text" id="lastName" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" style=" padding-left: 2%; padding: 2%;">Gender</label>
+            <div class="radio-group" style=" padding: 2%;">
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+        </div>
+
+       
+        <div class="form-group" style=" margin-left: 15px; padding: 1%;">
+            <label class="form-label" for="city">City</label>
+            <select id="city" class="form-control">
+                <option value="">Select</option>
+                <option value="">Select City</option>
+                <option value="islamabad">Islamabad</option>
+                <option value="lahore">Lahore</option>
+                <option value="karachi">Karachi</option>
+                <option value="faisalabad">Faisalabad</option>
+                <option value="rawalpindi">Rawalpindi</option>
+                <option value="peshawar">Peshawar</option>
+                <option value="quetta">Quetta</option>
+                <option value="multan">Multan</option>
+                <option value="sialkot">Sialkot</option>
+                <option value="bahawalpur">Bahawalpur</option>
+                <option value="sukkur">Sukkur</option>
+                <option value="gujranwala">Gujranwala</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="abbottabad">Abbottabad</option>
+                <option value="mirpur">Mirpur</option>
+
+            </select>
+        </div>
+
+        <div class="form-group" style=" padding: 2%;">
+            <label class="form-label" for="state">location</label>
+            <select id="state" class="form-control">
+                <option value="">Select</option>
+                <option value="option1">I/10-1</option>
+                <option value="option2">I/10-2</option>
+                <option value="">I/10-3</option>
+                <option value="islamabad">I/10-4</option>
+                <option value="lahore">G-10</option>
+                <option value="karachi">G-11</option>
+                <option value="faisalabad">F-9</option>
+                <option value="rawalpindi">F-10</option>
+                <option value="peshawar">F-11</option>
+                <option value="quetta">H-9</option>
+                <option value="multan">H-12</option>
+                <option value="sialkot">D-17</option>
+                <option value="bahawalpur">B-12</option>
+                <option value="sukkur">Wahkend</option>
+                <option value="gujranwala">I-14</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="abbottabad">I-11</option>
+                <option value="mirpur">DHA</option>
+            </select>
+        </div>
+
+        <div class="form-group" style=" padding: 2%;">
+            <label class="form-label" for="dob">Date of Birth</label>
+            <input type="date" id="dob" class="form-control">
+        </div>
+
+        <div class="form-group" style=" float: left; padding: 2%;">
+            <label class="form-label" for="pincode">Pincode</label>
+            <input type="text" id="pincode" class="form-control">
+        </div>
+
+        <div class="form-group" style=" padding: 2%;">
+            <label class="form-label" for="course">Course</label>
+            <input type="text" id="course" class="form-control">
+        </div>
+
+        <div class="form-group" style="float: left; padding: 2%;">
+            <label class="form-label" for="email">Email ID</label>
+            <input type="email" id="email" class="form-control">
+        </div>
+        <div class="form-group" style=" padding: 2%;">
+            <label class="form-label" for="email"> Password</label>
+            <input type="email" id="email" class="form-control">
+        </div>
+
+        <div class="btn-container">
+            <a href="index.html" type="reset" class="btn btn-reset">Back</a>
+            <a href="index.html" type="submit" class="btn btn-submit"> Submit Form</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
